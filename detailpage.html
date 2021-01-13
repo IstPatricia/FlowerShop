@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Floweropolis</title>
+    <meta name="author" content="Patricia's Flower Shop">
+    <meta name="description" content="Front for Patricia's Flower Shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="lo.png">
+    <link rel="stylesheet" href="styles.css">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <script>
+        function save(){
+            localStorage.setItem("flower", true)
+        }
+
+        window.onload = function(){
+            var favorite = document.getElementById('favorite');
+            if(window.localStorage)
+            {
+                var storage = window.localStorage;
+                if(storage.getItem('flower') =='true')
+                {
+                    favorite.innerHTML = "Flower arrangement is one of your favorites";
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><img src="lo.png" alt="Pink flower" height="70" width="90" /></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="floweroverview.html">All arrangements</a></li>
+            </ul>    
+        </nav>
+    </header>
+
+    <div style="width: 1000px;margin-left: auto; margin-right: auto;">
+        <aside id="leftmenu">
+            <header>
+                <h4 style="text-align: center;">Flower arrangements</h4>
+            </header>
+            <ul>
+                <li><a href="floweroverview.html">All arrangements</a></li>
+                <li><a href="floweroverview.html">Roses centerpiece</a></li>
+                <li><a href="floweroverview1.html">Peonies centerpiece</a></li>
+                <li><a href="floweroverview2.html">Lilies centerpiece</a></li>
+                <li><a href="#school">Flower Arangement School</a></li>
+            </ul>
+            <input type="search" class="searchbox" placeholder="Search" />
+            <a href="index.html"><img src="lo.png" alt="Golden shape of a lotus flower" height="215" /></a>
+        </aside>
+
+        <main id="main">
+            <article>
+
+                <header>
+                    <h1 style="font-size: 40px; color:#DAB942">Luxury pink arrangement</h1>
+                </header>
+                <figure>
+                    <a href="C:\Users\IULIAN\Desktop\Pluralsight - HTML Fundamentals\Building a website with HTML\My Work\BethanysPieShop\1.jpg" target="_blank">
+                        <img src="arr2.PNG" width="250" alt="Flowers" />
+                    </a>
+                    <figcaption>Our world-famous lilies arangement</figcaption>
+                </figure>
+
+                <p>
+                    <button onclick="save()" type="button">Save as favorite</button>
+                    <span id="favorite"></span>
+                </p>
+
+                <div>
+                    
+                    <h2>Description</h2>
+                    <p><strong>Price 150 Ron</strong></p>
+                    <p>Basket size: L = 25 cm / l = 16 cm / H = 9 cm</p>
+                    <p> The <em>perfect</em> gift for any ocassion</p>
+                    <p>
+                        <span style="color: rgb(204, 146, 58); font-weight: bold;">
+                            Important information:
+                        </span>
+                    Not all flowers are available at any time of the year
+                    </p>
+                    <p>
+                        Please note that an order can be placed <strong>at least 24 hours</strong> before the desired delivery time
+                    </p>
+
+                    <p><small>We care for environment and limit C0<sub>2</sub></small> by using reclicled materials in our designs</p>
+                    <hr>
+                    <h2>Care instructions </h2>
+                    <ol type="I">
+                        <li>Periodically add water to the sponge</li>
+                        <li>Keep the arangement inside</li>
+                        <li>Store it at a temperature between 22 - 24 &#8451;</li>
+                     
+                    </ol>
+
+                    <hr>
+                    <h3>The arangement contains</h3>
+                    <ul>
+                        <li>3 pink roses</li>
+                        <li>5 hyacinths mixed colors</li>
+                        <ul>
+                            <li>3 blue</li>
+                            <li>2 white</li>
+                        </ul>
+                        <li>3 antirrihnium</li>
+                        <li>3 pink lisianthus</li>
+                        <li>1 echeveria</li>
+                        <li>eucalyptus</li>
+                        <li>1 brown rectangular basket</li>
+                    </ul>
+                </div>
+
+            </article>
+        </main>
+        <footer>
+            <p>
+                Contact & follow us
+            </p>
+            <ul>
+                <li><a href="mailto:floweropolis@gmail.com"><img src="mail.png" alt="Email icon" height="25" width="25" /></a></li>
+                <li><a href="https://www.linkedin.com/in/floweropolis/"><img src="LK.png" alt="LinkedIn icon" height="25" width="25" /></a></li>
+                <li><a href="https://www.facebook.com/in/floweropolis/"><img src="FB.png" alt="Facebook icon" height="25" width="25" /></a></li>
+            </ul>
+        
+            <br>
+            <p><small> &copy; 2020 Patricia's Flower Shop - Floweropolis: Pluralsight "Buiding Website With HTML" course</small></p>
+            <p><small><i>Created after the course of Gill Cleeren</i></small></p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
